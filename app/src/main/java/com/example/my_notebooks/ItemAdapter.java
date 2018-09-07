@@ -94,6 +94,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
 
                             alertDialog.dismiss();
                             addItem(position, userInput.getText().toString());
+
+
+
                         }
                     });
 
