@@ -131,11 +131,11 @@ public class son_item extends Activity {
                 Intent intent=new Intent(son_item.this,Details_Activity.class);
                 Bundle bundle=new Bundle();
                 bundle.putString("id", id); //给Bundle添加key-value值对
-                bundle.putString("tab",((TextView)view).getText().toString());
+                bundle.putString("tab",tab);
                 bundle.putString("head", tit); //给Bundle添加key-value值对
                 bundle.putString("main",main1);
                 intent.putExtras(bundle); // 为intent 设置bundle
-                startActivityForResult(intent, 99);
+                startActivityForResult(intent, 101);
 
             }
         });
@@ -174,7 +174,6 @@ public class son_item extends Activity {
                 bundle.putString("tab",tab);
                 bundle.putString("head", f.getName()); //给Bundle添加key-value值对
                 bundle.putString("main",f.getImageId());
-                bundle.putString("time",f.getTime());
                 intent.putExtras(bundle);
 
                 startActivityForResult(intent, 99);
@@ -234,6 +233,9 @@ public class son_item extends Activity {
             }}
         else if(requestCode==99)
             if(resultCode==RESULT_OK){
+                    onCreate(null); }
+        else if(requestCode==101)
+             if(resultCode==RESULT_OK){
                     onCreate(null); }
     }
     protected void onResume() {
